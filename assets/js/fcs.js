@@ -314,7 +314,7 @@ if (location.protocol === 'http:' && !/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.te
      PC → WhatsApp, Facebook, E-Mail oder Link kopieren. Geteilt wird immer der Link direkt auf den Abschnitt (#id). ---------- */
   function teilen() {
     const page = (location.pathname.split('/').pop() || 'index.html').replace(/\.html$/, '');
-    if (!['wissen', 'werkstatt', 'hilfe', 'bau', 'filmen', 'hallenfliegen'].includes(page)) return;
+    if (!['wissen', 'werkstatt', 'hilfe', 'bau', 'filmen', 'hallenfliegen', 'regeln'].includes(page)) return;
     const hosts = $$('main [data-toc]:not(.nur-mitglied), main [data-teilen]').filter(h => h.id);
     if (!hosts.length) return;
     let pop = null;
